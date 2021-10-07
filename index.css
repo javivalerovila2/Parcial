@@ -1,0 +1,62 @@
+html {
+    background: rgb(34,193,195);
+    background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgb(48, 221, 57) 100%);
+
+}
+
+h1,h2{
+    text-align: center;
+}
+
+textarea {
+    background: rgb(223,255,255);
+background: linear-gradient(90deg, rgba(223,255,255,1) 0%, rgba(179,255,183,1) 100%);
+
+
+}
+
+div.button{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+button {background-image: linear-gradient(to right, #16A085 0%, #F4D03F  51%, #16A085  100%);
+}
+button {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ button:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+ p{
+     display: flex;
+     flex-direction: row;
+     justify-content:space-around;
+ }
+
+ div.caja{
+     display: flex;
+     display: flex;
+     flex-direction: row;
+     justify-content:center;
+
+ }
+
+ #view{
+     color: #eee;
+     font-size: x-large;
+ }
