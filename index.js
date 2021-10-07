@@ -23,9 +23,9 @@ const char_array = (text) =>
     .split("")                       // generate array
     .filter((w) => (w!==""))         // remove empty string elem
 
-// TODO
 const word_array = (text) =>
     clean_string(text)
+    .replace(/[^a-zñáéíóú]+/igm, " ") // leave only letters
     .split(" ")                       // generate array
     .filter((w) => (w!==""))          // remove empty string elem
 
@@ -77,6 +77,18 @@ const letter_index = () => {
 
 // TODO
 const word_index = () => {
+    let {text, view} = getIO();
+  let ordered_letters =
+    word_array(text)
+    .map(el => el.toLowerCase())
+    .sort();
+
+  let result =
+    repetitions(ordered_letters)
+    .map(el => `${el.s}: ${el.n}`)
+    .join("\n");
+
+  view.innerHTML = result;
 };
 
 const sentence_index = () => {
