@@ -24,7 +24,10 @@ const char_array = (text) =>
     .filter((w) => (w!==""))         // remove empty string elem
 
 // TODO
-const word_array = (text) => []
+const word_array = (text) =>
+    clean_string(text)
+    .split(" ")                       // generate array
+    .filter((w) => (w!==""))          // remove empty string elem
 
 const sentence_array = (text) =>
     clean_string(text)
@@ -49,7 +52,7 @@ const count = () => {
   let {text, view} = getIO();
 
   let result =  `Caracteres: ${char_array(text).length}\n`;
-      result += `Palabras: ${"No implementado"/*TO DO*/}\n`;
+      result += `Palabras: ${word_array(text).length}\n`;
       result += `Frases: ${sentence_array(text).length}\n`;
       result += `Lineas: ${text.split("\n").length}\n`;
 
